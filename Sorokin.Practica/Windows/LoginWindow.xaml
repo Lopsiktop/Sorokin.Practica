@@ -1,0 +1,31 @@
+﻿<Window x:Class="Sorokin.Practica.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sorokin.Practica.Windows"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="500" Width="700" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Авторизация">
+                <StackPanel Width="500" VerticalAlignment="Center" Margin="20">
+                    <TextBlock Text="Авторизация" Style="{StaticResource MaterialDesignHeadline4TextBlock}"/>
+                    <TextBox Name="sEmail" md:HintAssist.Hint="Почта" Style="{StaticResource tb}"/>
+                    <PasswordBox Name="sPass" md:HintAssist.Hint="Пароль" Style="{StaticResource pb}"/>
+                    <Button Click="SignInClick" Margin="0 10 0 0" Content="Войти" Style="{StaticResource btn}"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem IsSelected="True" Header="Регистрация">
+                <StackPanel Width="500" VerticalAlignment="Center" Margin="20">
+                    <TextBlock Text="Регистация" Style="{StaticResource MaterialDesignHeadline4TextBlock}"/>
+                    <TextBox Name="rEmail" md:HintAssist.Hint="Почта" Style="{StaticResource tb}"/>
+                    <PasswordBox Name="rPass" md:HintAssist.Hint="Пароль" Style="{StaticResource pb}"/>
+                    <PasswordBox Name="rPassRep" md:HintAssist.Hint="Повторите пароль" Style="{StaticResource pb}"/>
+                    <Button Click="RegisterClick" Margin="0 10 0 0" Content="Зарегистрироваться" Style="{StaticResource btn}"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
