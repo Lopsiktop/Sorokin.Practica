@@ -4,11 +4,16 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Sorokin.Practica.Windows.Pages"
+      xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="1000"
       Title="ShopPage" d:Background="White">
 
-    <Grid>
-        <TextBlock Text="Shop" FontSize="40"/>
-    </Grid>
+    <DockPanel Margin="20">
+        <TextBlock DockPanel.Dock="Top" Text="Товары" Style="{StaticResource MaterialDesignHeadline4TextBlock}"/>
+
+        <WrapPanel Margin="0 20 0 0">
+            
+        </WrapPanel>
+    </DockPanel>
 </Page>

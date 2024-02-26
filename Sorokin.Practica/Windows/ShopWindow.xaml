@@ -27,7 +27,7 @@
             </StackPanel>
         </Border>
 
-        <Frame Name="MainFrame" Grid.Column="1">
+        <Frame NavigationUIVisibility="Hidden" Name="MainFrame" Grid.Column="1">
             
         </Frame>
     </Grid>
