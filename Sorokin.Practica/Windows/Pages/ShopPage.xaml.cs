@@ -14,6 +14,7 @@ namespace Sorokin.Practica.Windows.Pages
 
         private void Page_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
+            GoodsPanel.Children.Clear();
             var context = new AppDbContext();
             foreach (var product in context.Products)
             {

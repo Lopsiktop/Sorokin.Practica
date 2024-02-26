@@ -28,5 +28,10 @@ namespace Sorokin.Practica.Windows
         {
             _switcher.ShowPage<ShopPage>();
         }
+
+        private void BasketPageClick(object sender, RoutedEventArgs e)
+        {
+            _switcher.ShowPage<BasketPage>();
+        }
     }
 }
