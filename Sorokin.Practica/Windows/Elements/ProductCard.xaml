@@ -6,17 +6,18 @@
              xmlns:local="clr-namespace:Sorokin.Practica.Windows.Elements"
              mc:Ignorable="d" 
              xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes">
-    <md:Card UniformCornerRadius="10" Width="250" Height="425">
-        <DockPanel Margin="10">
+    <Border Name="Main" Padding="10" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave" CornerRadius="10" Width="250" Height="450">
+        <Border.Effect>
+            <DropShadowEffect x:Name="ShadowEffect" Color="Gray" Opacity="0" BlurRadius="10" ShadowDepth="2" Direction="270"/>
+        </Border.Effect>
+        <DockPanel>
             <StackPanel DockPanel.Dock="Bottom">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Name="RealPriceBox" Text="262$" FontSize="19" FontWeight="DemiBold" Foreground="#2196F3" Style="{StaticResource MaterialDesignBody1TextBlock}"/>
                     <TextBlock Name="FakePriceBox" Margin="10 3 0 0" FontSize="17" Text="262$" TextDecorations="Strikethrough" FontWeight="DemiBold" Foreground="Gray" Style="{StaticResource MaterialDesignBody1TextBlock}"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Name="ProviderBox" FontSize="15" Text="Company" Style="{StaticResource MaterialDesignBody1TextBlock}"/>
-                    <TextBlock Name="NameBox" TextWrapping="WrapWithOverflow" FontSize="15" Foreground="Gray" Text=" / Name" Style="{StaticResource MaterialDesignBody1TextBlock}"/>
-                </StackPanel>
+                <TextBlock Name="NameBox" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" FontSize="15" Text="Name" Style="{StaticResource MaterialDesignBody1TextBlock}"/>
+                <TextBlock Name="ProviderBox" FontSize="15"  Foreground="Gray" Text="Company" Style="{StaticResource MaterialDesignBody1TextBlock}"/>
                 <StackPanel Orientation="Horizontal">
                     <md:PackIcon Height="20" Kind="Star" Foreground="Orange"/>
                     <TextBlock Name="RatingBox" FontSize="14" Margin="3 0 0 0" Text="4.9"/>
@@ -31,5 +32,5 @@
                 </Border.Background>
             </Border>
         </DockPanel>
-    </md:Card>
+    </Border>
 </UserControl>

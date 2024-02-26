@@ -1,5 +1,7 @@
-﻿using Sorokin.Practica.Domain;
+﻿using Sorokin.Practica.Application.Utils;
+using Sorokin.Practica.Domain;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace Sorokin.Practica.Windows.Elements
@@ -17,9 +19,21 @@ namespace Sorokin.Practica.Windows.Elements
             NameBox.Text = product.Name;
 
             RatingBox.Text = product.Rating.ToString();
-            VotesAmountBox.Text = product.VoteAmount.ToString();
+            VotesAmountBox.Text = product.VoteAmount.ToString() + " оценок";
 
-            ImageBox.ImageSource = new BitmapImage(new Uri(product.PhotoPath, UriKind.Relative));
+            ImageBox.ImageSource = new BitmapImage(new Uri(ImageSaver.GetFullPath(product.PhotoPath), UriKind.Absolute));
+        }
+
+        private void Border_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            Main.Background = Brushes.White;
+            ShadowEffect.Opacity = 0.3;
+        }
+
+        private void Border_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            Main.Background = Brushes.Transparent;
+            ShadowEffect.Opacity = 0;
         }
     }
 }

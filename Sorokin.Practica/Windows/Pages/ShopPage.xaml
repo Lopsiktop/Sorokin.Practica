@@ -7,13 +7,17 @@
       xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="1000"
-      Title="ShopPage" d:Background="White">
+      Title="ShopPage" d:Background="White" Loaded="Page_Loaded">
 
     <DockPanel Margin="20">
         <TextBlock DockPanel.Dock="Top" Text="Товары" Style="{StaticResource MaterialDesignHeadline4TextBlock}"/>
 
-        <WrapPanel Margin="0 20 0 0">
-            
-        </WrapPanel>
+        <ScrollViewer>
+            <Grid Margin="10">
+                <WrapPanel Name="GoodsPanel">
+
+                </WrapPanel>
+            </Grid>
+        </ScrollViewer>
     </DockPanel>
 </Page>
