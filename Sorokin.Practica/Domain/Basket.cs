@@ -1,6 +1,6 @@
 ﻿namespace Sorokin.Practica.Domain;
 
-public class Basket : Entity
+public class Basket
 {
     public User User { get; set; }
     public int UserId { get; set; }

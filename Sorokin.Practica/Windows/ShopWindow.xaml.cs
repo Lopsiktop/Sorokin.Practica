@@ -8,14 +8,14 @@ namespace Sorokin.Practica.Windows
 {
     public partial class ShopWindow : Window
     {
-        private readonly User _user;
+        public static User user;
         private PageSwitcher _switcher;
 
-        public ShopWindow(User user)
+        public ShopWindow(User _user)
         {
             InitializeComponent();
 
-            _user = user;
+            user = _user;
             _switcher = new PageSwitcher(MainFrame);
         }
 
